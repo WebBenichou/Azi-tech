@@ -1,4 +1,5 @@
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
@@ -6,7 +7,9 @@ import Services from './Pages/Services'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Products from './Pages/Products'
-import ProductDetails from './Pages/ProductDetails' // ✅ FIXED PATH
+import ProductDetails from './Pages/ProductDetails'
+import { useEffect, useState } from 'react';
+import Button from './Components/button';
 
 function App() {
   const products = [
@@ -18,6 +21,7 @@ function App() {
   return (
     <div>
       <Navbar />
+      <Button />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/services' element={<Services />} />
